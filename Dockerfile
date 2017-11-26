@@ -10,4 +10,14 @@ RUN apt-get update && \
 ADD ./usr/local/ /usr/local/ 
 
 ENV LD_LIBRARY_PATH /usr/local/lib/
+
+RUN mkdir /data && \
+	mkdir /conf && \
+	mkdir /bootstrap
 	
+ADD ./motion.conf /bootstrap/
+
+EXPOSE 8080
+EXPOSE 8081
+
+ENTRYPOINT ["/startup.sh"]
