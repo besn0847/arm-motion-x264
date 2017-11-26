@@ -16,6 +16,7 @@ RUN mkdir /data && \
 	mkdir /bootstrap
 	
 ADD ./motion.conf /bootstrap/
+ADD ./startup.sh /
 
 EXPOSE 8080
 EXPOSE 8081

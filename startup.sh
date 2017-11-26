@@ -11,6 +11,6 @@ fi
 
 while(true)
 do
-	sudo -u vc motion -c /conf/motion.conf
+	motion -c /conf/motion.conf
 	sleep 5
 done
